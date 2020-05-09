@@ -1,0 +1,3 @@
+class ApiFidac {
+  url = '';
+}
