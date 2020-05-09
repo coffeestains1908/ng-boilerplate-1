@@ -15,13 +15,15 @@ export class AuthService {
     });
   }
 
-  loginByEmail(email: string, pwd: string): boolean {
-    const user = TEST_USERS.find(value => value.email === email && value.pwd === pwd);
-    if (user) {
-      this.userState.next(user);
-      return true;
-    } else {
-      return false;
-    }
+  loginByEmail(email: string, pwd: string): Promise<boolean> {
+    return new Promise(resolve => {
+      const user = TEST_USERS.find(value => value.email === email && value.pwd === pwd);
+      if (user) {
+        this.userState.next(user);
+        resolve(true);
+      } else {
+        resolve(false);
+      }
+    });
   }
 }
