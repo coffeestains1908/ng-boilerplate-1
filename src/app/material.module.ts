@@ -1,10 +1,11 @@
 import {NgModule} from '@angular/core';
-import {MdcButtonModule, MdcTypographyModule} from '@angular-mdc/web';
+import {MdcButtonModule, MdcCardModule, MdcTypographyModule} from '@angular-mdc/web';
 
 @NgModule({
   exports: [
     MdcButtonModule,
-    MdcTypographyModule
+    MdcTypographyModule,
+    MdcCardModule
   ]
 })
 export class MaterialModule {
