@@ -4,13 +4,15 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthComponent } from './auth.component';
 import {AuthRoutingModule} from './auth-routing.module';
+import {MaterialModule} from '../material.module';
 
 
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, AuthComponent],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    MaterialModule,
   ]
 })
 export class AuthModule {
