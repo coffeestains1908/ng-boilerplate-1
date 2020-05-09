@@ -15,7 +15,6 @@ import {FidacModule} from './fidac/fidac.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule,
     ErrorModule,
     AuthModule,
     FidacModule
