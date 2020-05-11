@@ -4,6 +4,7 @@ import {CommonModule} from '@angular/common';
 import {AuthComponent} from './auth.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
+import {CheckComponent} from './check/check.component';
 
 const routes: Routes = [
   {
@@ -19,8 +20,12 @@ const routes: Routes = [
         component: RegisterComponent
       },
       {
+        path: 'check',
+        component: CheckComponent
+      },
+      {
         path: '**',
-        redirectTo: 'login'
+        redirectTo: 'check'
       },
     ]
   },
