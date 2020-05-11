@@ -1,15 +1,15 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {CommonModule} from '@angular/common';
-import {FidacComponent} from './fidac.component';
 import {AuthGuard} from '../../@guards/AuthGuard';
+import {MainComponent} from './main.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
     canActivate: [AuthGuard],
-    component: FidacComponent,
+    component: MainComponent,
     children: [
       {
         path: '**',
@@ -27,5 +27,5 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: [AuthGuard]
 })
-export class FidacRoutingModule {
+export class MainRoutingModule {
 }

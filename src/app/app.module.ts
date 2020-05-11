@@ -6,7 +6,7 @@ import {MaterialModule} from './material.module';
 import {AppRoutingModule} from './app-routing.module';
 import {ErrorModule} from './error/error.module';
 import {AuthModule} from './auth/auth.module';
-import {FidacModule} from './fidac/fidac.module';
+import {MainModule} from './main/main.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import {FidacModule} from './fidac/fidac.module';
     AppRoutingModule,
     ErrorModule,
     AuthModule,
-    FidacModule
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]
