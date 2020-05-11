@@ -5,5 +5,5 @@ interface User {
 }
 
 export const TEST_USERS = [
-  {email: 'test@test.com', pwd: '123'},
+  {id:0, email: 'test@test.com', pwd: '123'},
 ];
