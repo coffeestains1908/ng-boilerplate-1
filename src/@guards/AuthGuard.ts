@@ -20,7 +20,7 @@ export class AuthGuard implements CanActivate {
     if (isLoggedIn) {
       return true;
     } else {
-      return this.router.parseUrl('/error/notauthorized');
+      return this.router.parseUrl('/auth/check');
     }
   }
 }
