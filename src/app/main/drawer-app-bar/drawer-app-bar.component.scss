@@ -1,0 +1,38 @@
+
+@use '@angular-mdc/theme/material';
+@use '@material/typography/mdc-typography';
+@use '@material/top-app-bar/mdc-top-app-bar';
+@use '@material/icon-button/mdc-icon-button';
+@use '@material/drawer/mdc-drawer';
+@use '@material/list/mdc-list';
+
+@use '@material/top-app-bar/variables' as top-app-bar-variables;
+@use '@material/drawer/variables' as drawer-variables;
+
+body {
+  background: #fafafa;
+  margin: 0;
+  height: 100vh;
+}
+
+.app-container {
+  display: flex;
+
+  .mdc-drawer {
+    height: 100vh;
+  }
+
+  .mdc-top-app-bar.drawer-open {
+    max-width: calc(100vw - #{drawer-variables.$width});
+  }
+
+  .main-content {
+    overflow: auto;
+    max-height: calc(100vh - #{top-app-bar-variables.$dense-row-height});
+    margin-top: top-app-bar-variables.$dense-row-height;
+  }
+
+  .main-content__spacing {
+    margin: 12px 32px;
+  }
+}
